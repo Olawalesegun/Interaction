@@ -25,7 +25,7 @@ async function main() {
 
   const PAIR_Contract = await ethers.getContractAt( "IERC20", USDC_DAI_PAIR,impersonatedSigner);  
   const USDC_CON = await ethers.getContractAt("IERC20", USDC, impersonatedSigner);
-  const DAI_CON = await ethers.getContractAt("IERC20", DAI);
+  const DAI_CON = await ethers.getContractAt("IERC20", DAI, impersonatedSigner);
 
 
   await USDC_CON.approve(ROUTER_ADDRESS, AMOUNT1);
